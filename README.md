@@ -1,24 +1,15 @@
 # Issues
 
-**TODO: Add description**
+Fetch the `x` oldest open issues from GitHub for a given username's project
 
-## Installation
+Build with
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+```bash
+$ mix escript.build
+```
 
-  1. Add `issues` to your list of dependencies in `mix.exs`:
+Then run the generated `issues` executable providing a `user`, `project` and (optionally) a `count`, e.g. to get the 10 oldest issues for [Elixir-Lang/Elixir](https://github.com/elixir-lang/elixir) run;
 
-    ```elixir
-    def deps do
-      [{:issues, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `issues` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:issues]]
-    end
-    ```
-
+```bash
+$ ./issues elixir-lang elixir 10
+```
